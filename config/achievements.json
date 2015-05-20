@@ -1,0 +1,20 @@
+{
+	"achievements": [
+		{
+			"id" : 1,
+			"requiredAction" : "spin",
+			"requiredTimes" : 10,
+			"rewards": [
+				"coin", 10
+			]
+		}, 
+		{
+			"id" : 2,
+			"requiredAction" : "spin",
+			"requiredTimes" : 10,
+			"rewards": [
+				"coin", 10
+			]
+		}, 
+	]
+}
