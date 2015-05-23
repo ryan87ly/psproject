@@ -1,13 +1,14 @@
-
 var Achievement = function(achievementConfig, userAchievementInfo) {
+	var self = this;
 	self.achievementConfig = achievementConfig;
 	self.userAchievementInfo = userAchievementInfo;
 }
 
 Achievement.prototype.increaseActionCount = function() {
-	var updatedProgress = self.userAchievementInfo.progress + 1;
-	self.userAchievementInfo.progress = updatedProgress;
-	if(updatedProgress >= achievementConfig.requiredTimes) {
+	var updatedProgress = this.userAchievementInfo.progress + 1;
+	this.userAchievementInfo.progress = updatedProgress;
+	if(updatedProgress >= this.achievementConfig.requiredTimes) {
+		this.userAchievementInfo.status = "completed";
 		//achievement complete
 		return true;
 	} else {
@@ -16,7 +17,11 @@ Achievement.prototype.increaseActionCount = function() {
 }
 
 Achievement.prototype.currentProgress = function(){
-	return self.userAchievementInfo.progress;
+	return this.userAchievementInfo.progress;
+}
+
+Achievement.prototype.currentStatus = function(){
+	return this.userAchievementInfo.status;
 }
 
 
