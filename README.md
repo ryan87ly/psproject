@@ -37,14 +37,14 @@ Fill mongodb setting in config/mongo_config.json using valid json format.
 Modify achievement config in config/achiements.json using valid json format, a single achievement config should be like
 ```
 {
-			"id" : 1, //achievement id
-			"requiredAction" : "spin", //action the achievement will response 
-			"requiredTimes" : 2, //how many times the player action should  be done before complete the achievement
-			"rewards": [  //list for achievement rewards
-				{
-					"coin": 10
-				}
-			]
+	"id" : 1, //achievement id
+	"requiredAction" : "spin", //action the achievement will response 
+	"requiredTimes" : 2, //how many times the player action should  be done before complete the achievement
+	"rewards": [  //list for achievement rewards
+		{
+			"coin": 10
+		}
+	]
 }, 
 ```
 
