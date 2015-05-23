@@ -49,6 +49,16 @@ Modify achievement config in config/achiements.json using valid json format, a s
 ```
 
 ## How to trigger player action
+###By calling code
 ```
 application.emit("playerAction", userId, action);
 ```
+###By http request
+This app default creates a http server at localhost:8090. There are two routes setting at server for debug the whole logic.
+You can trigger a playerAction event by request
+
+http://localhost:8090/playerAction?userId=[**YOURUSERID**]&action=[**YOURACTION**]
+
+You can query user's achievement info by request 
+
+http://localhost:8090/queryUserAchievements?userId=[**YOURUSERID**]
